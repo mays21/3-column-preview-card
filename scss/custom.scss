@@ -1,4 +1,117 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 
-// $primary: #0074d9;
-// $danger: #ff4136;
+/*font size */
+$base-font-size: 15px;
+
+/* color */
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$paragraph: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+/* style */
+$btn-border-radius: 20px;
+$header-font-family: "Big Shoulders Display", cursive;
+$text-font-family: "Lexend Deca", sans-serif;
+
+// $map: (key1: value1, key2: value2, key3: value3); // マップ
+
+body {
+  background-color: $very-light-gray;
+  font-family: $text-font-family;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapper {
+  margin: 25% 0.8rem;
+  min-width: 346px;
+}
+.card {
+  border-radius: 0;
+  &:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+.sedan {
+  background-color: $bright-orange;
+}
+.suv {
+  background-color: $dark-cyan;
+}
+.luxury {
+  background-color: $very-dark-cyan;
+}
+.card-img {
+  display: block;
+  width: 20%;
+  margin: 2rem 2.4rem;
+  padding-top: 0.8rem;
+}
+.card-body {
+  margin: 0.6rem 0rem 2rem 0rem;
+  padding: 0 1rem 1.2rem 2rem;
+}
+.card-title {
+  color: $very-light-gray;
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.card-text {
+  color: $paragraph;
+  padding: 1.2rem 0.5rem 1rem 0;
+  font-size: 96%;
+}
+
+.btn.card-button {
+  background-color: $very-light-gray;
+  color: #000;
+  mix-blend-mode: screen;
+  border-radius: $btn-border-radius;
+  padding: 0.6rem 2rem;
+
+  &:hover {
+    background-color: transparent;
+    border: solid 1px $very-light-gray;
+    color: $very-light-gray;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 756px) {
+  .wrapper {
+    max-width: 918px;
+    margin: auto;
+  }
+
+  .card {
+    border-radius: 0;
+    &:first-child {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+    &:last-child {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
+  .card-button {
+    margin-top: 4rem;
+  }
+}
