@@ -16,8 +16,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/mays21/3-column-preview-card](https://github.com/mays21/3-column-preview-card)
+- Live Site URL: [https://mays21.github.io/3-column-preview-card/](https://mays21.github.io/3-column-preview-card/)
 
 ## My process
 
@@ -43,41 +41,47 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- Bootstrap5 card
+- Bootstrap5 Grid Card
+- SASS
 
 ### What I learned
 
-To see how you can add code snippets, see below:
+```scss
+.btn.card-button {
+  background-color: $very-light-gray;
+  color: #000;
+  mix-blend-mode: screen;
+  border-radius: $btn-border-radius;
+  padding: 0.6rem 2rem;
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+  &:hover {
+    background-color: transparent;
+    border: solid 1px $very-light-gray;
+    color: $very-light-gray;
+  }
 ```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 ### Continued development
 
 ### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
 - Frontend Mentor - [@mays21](https://www.frontendmentor.io/profile/mays21)
 
 ## Acknowledgments
+
+### SASS の導入
+
+1. npm init
+1. npm install bootstrap
+1. scss/custom.scss 内で
+
+   ```
+   @import "../node_modules/bootstrap/scss/bootstrap"
+   ```
+
+1. live sass compiler 拡張インストール
+   1. "format": "compressed"
+   1. "savePath":"/css"
