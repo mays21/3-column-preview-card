@@ -81,12 +81,10 @@ main {
   border-radius: $btn-border-radius;
   padding: 0.6rem 2rem;
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: transparent;
-      border: solid 1px $very-light-gray;
-      color: $very-light-gray;
-    }
+  &:hover {
+    background-color: transparent;
+    border: solid 1px $very-light-gray;
+    color: $very-light-gray;
   }
 }
 
