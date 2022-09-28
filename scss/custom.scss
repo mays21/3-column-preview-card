@@ -81,10 +81,12 @@ main {
   border-radius: $btn-border-radius;
   padding: 0.6rem 2rem;
 
-  &:hover {
-    background-color: transparent;
-    border: solid 1px $very-light-gray;
-    color: $very-light-gray;
+  @media (hover: hover) {
+    &:hover {
+      background-color: transparent;
+      border: solid 1px $very-light-gray;
+      color: $very-light-gray;
+    }
   }
 }
 
@@ -96,9 +98,9 @@ main {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 756px) {
+@media screen and (min-width: 47.25rem) {
   .wrapper {
-    max-width: 918px;
+    max-width: 58rem;
     margin: auto;
   }
 
